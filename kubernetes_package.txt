@@ -1,0 +1,10 @@
+https://dl.k8s.io/v1.13.3/kubernetes.tar.gz
+https://dl.k8s.io/v1.13.3/kubernetes-client-linux-amd64.tar.gz
+https://dl.k8s.io/v1.13.3/kubernetes-server-linux-amd64.tar.gz
+https://dl.k8s.io/v1.13.3/kubernetes-node-linux-amd64.tar.gz
+https://github.com/etcd-io/etcd/releases/download/v3.3.12/etcd-v3.3.12-linux-amd64.tar.gz
+https://github.com/coreos/flannel/releases/download/v0.11.0/flannel-v0.11.0-linux-arm64.tar.gz
+https://pkg.cfssl.org/R1.2/cfssl_linux-amd64
+https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64
+https://pkg.cfssl.org/R1.2/cfssl-certinfo_linux-amd64
+https://download.docker.com/linux/static/stable/x86_64/docker-18.09.2.tgz
