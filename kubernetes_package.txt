@@ -3,6 +3,7 @@ ETCD_VER=v3.3.12
 FLANNEL_VER=v0.11.0
 CFSSL_VER=R1.2
 DOCKER_VER=18.09.2
+DOCKER_COMPOSE_VER=1.24.0
 https://dl.k8s.io/${K8S_VER}/kubernetes.tar.gz
 https://dl.k8s.io/${K8S_VER}/kubernetes-client-linux-amd64.tar.gz
 https://dl.k8s.io/${K8S_VER}/kubernetes-server-linux-amd64.tar.gz
@@ -13,3 +14,5 @@ https://pkg.cfssl.org/${CFSSL_VER}/cfssl_linux-amd64
 https://pkg.cfssl.org/${CFSSL_VER}/cfssljson_linux-amd64
 https://pkg.cfssl.org/${CFSSL_VER}/cfssl-certinfo_linux-amd64
 https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VER}.tgz
+curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VER}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose && ln -sv /usr/local/docker-compose /usr/bin/docker-compose
