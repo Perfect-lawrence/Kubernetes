@@ -29,7 +29,8 @@ else
 	echo "please use supper privileges users"
 	exit 0
 fi
-curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+DOCKER_COMPOSE_VER=1.24.0
+curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VER}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 if [ $? -eq 0 ];
 	chmod +x /usr/local/bin/docker-compose
 	/usr/local/bin/docker-compose --version
