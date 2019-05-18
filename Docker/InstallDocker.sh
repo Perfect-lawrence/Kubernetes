@@ -1,7 +1,7 @@
 #!/bin/bash
 # remove old docker
 ##sudo yum remove docker docker-common docker-selinux docker-engine
-
+# https://docs.docker.com/install/linux/docker-ce/centos/
 if [ ${UID} -eq 0 ]; then
 # stop firewalld
 
