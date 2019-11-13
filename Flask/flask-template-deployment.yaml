@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: my-flask-web
+  name: my-flask-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: my-flask-web
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: my-flask-web
+    spec:
+      containers:
+      - image: flask_web:v1
+        name: my-flask-web
+        ports:
+        - containerPort: 5000
+        resources: {}
+status: {}
