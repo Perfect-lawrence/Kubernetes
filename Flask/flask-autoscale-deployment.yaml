@@ -1,0 +1,20 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    kubernetes.io/change-cause: kubectl autoscale deployment my-flask-web --max=
+2
+      --cpu-percent=50 --record=true --dry-run=true --output=yaml
+  creationTimestamp: null
+  name: my-flask-web
+spec:
+  maxReplicas: 2
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: my-flask-web
+  targetCPUUtilizationPercentage: 50
+status:
+  currentReplicas: 0
+  desiredReplicas: 0
+

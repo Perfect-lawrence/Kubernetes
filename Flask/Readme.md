@@ -12,4 +12,6 @@
 
 # kubectl run my-flask-web --image=flask_web:v1 --replicas=2 --generator=deployment/apps.v1 --dry-run -o yaml > ./flask-deployment.yaml
 
+
+# kubectl autoscale deployment my-flask-web --max=2 --cpu-percent=50 --record --dry-run -o yaml > flask-autoscale-deployment.yaml
 ```
