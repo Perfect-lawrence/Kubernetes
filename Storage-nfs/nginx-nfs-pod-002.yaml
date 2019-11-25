@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nfs-pod002
+spec:
+  containers:
+    - name: nginx-frontend
+      image: nginx
+      volumeMounts:
+      - mountPath: "/var/www/html"
+        name: nfs-pv002
+  volumes:
+    - name: nfs-pv002
+      persistentVolumeClaim:
+        claimName: nfs-pvc002
